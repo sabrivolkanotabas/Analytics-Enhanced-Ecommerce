@@ -198,8 +198,33 @@ window.dataLayer.push({
     }
 });
 ```
+
+### 1.3.6 Favorilere Ekle.
  
-### 1.3.6 Sepetten Çıkar.
+```add_to_wishlist``` favorilere eklenen ürünlerin ölçümünü yapar.
+ 
+```javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': "add_to_wishlist",
+    'currency': "TRY",
+    'value': 7.77,
+    'items': [{
+        'item_name': "Bayan Kol Saati",
+        'item_id': "12345",
+        'price': 7.70, // Ürün fiyatı
+        'item_brand': "Google", // Ürün markası
+        'item_category': "Saat", // Ürün kategorisi
+        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+        'item_category3': "3. Kategori",
+        'item_category4': "4. Kategori",
+        'item_variant': "Metalik Gri", 
+        'quantity': 1,
+    }]
+});
+```
+ 
+### 1.3.7 Sepetten Çıkar.
  
 ```remove_from_cart``` kullanıcı sepet sayfasından bir ürünü çıkardığında gönderilir.
  
@@ -235,7 +260,81 @@ window.dataLayer.push({
 });
 ```
 
-### 1.3.7 Ödeme Başlatma.
+### 1.3.8 Sepet.
+ 
+```view_cart``` Kullanıcının sepet sayfasına geldiğinde tetiklenir.. Toplanan veri ```begin_checkout``` event isminde dataLayer’a ilave edilir.
+ 
+ 
+```javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': "view_cart",
+    'currency': "TRY",
+    'value': 156, // Toplam tutar.
+    'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 96.70,
+            'item_brand': "Google",
+            'item_category': "Saat",
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+        },
+        {
+            'item_name': "Erkek Kol Saati",
+            'item_id': "12345",
+            'price': 59.30,
+            'item_brand': "Apple",
+            'item_category': "Saat",
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+        }
+    ]
+});
+```
+
+### 1.3.9 Ödeme Bilgisi.
+ 
+```add_payment_info``` kullanıcı ödeme sırasında ödeme bilgilerini eklediğinde tetiklenir.
+ 
+ 
+```javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': "add_payment_info",
+    'currency': "TRY",
+    'value': 156, // Toplam tutar.
+    'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 96.70,
+            'item_brand': "Google",
+            'item_category': "Saat",
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+        },
+        {
+            'item_name': "Erkek Kol Saati",
+            'item_id': "12345",
+            'price': 59.30,
+            'item_brand': "Apple",
+            'item_category': "Saat",
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+        }
+    ]
+});
+```
+
+### 1.3.10 Ödeme Başlatma.
  
 Bir kullanıcı ödeme işlemini başlattığında gönderilir ve ödeme başlatma işlemlerini ölçmek için kullanılır. Toplanan veri ```begin_checkout``` event isminde dataLayer’a ilave edilir.
  
@@ -298,7 +397,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.8 Alışveriş.
+### 1.3.11 Alışveriş.
 
 ```purchase``` satın alma işlemini tamamladığında gönderilir. Ödeme işlemi başarılı olduğu taktirde aşağıdaki kod bloğu çalışır ve satın alınan ürünlerin listesi obje halinde dataLayer’a eklenilir.
  
