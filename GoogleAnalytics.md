@@ -16,7 +16,10 @@ Gelişmiş E-Ticaret raporlaması, kullanıcılarınızın alışveriş davranı
 - Ürün Görüntüleme: Kullanıcı ürün sayfasının detayına geldiğinde ürünle ilgili bilgiler ```view_item``` event isminde dataLayer’a eklenir.
 - Tıklama: Yukarıda bahsedilen view_item_list ve view_item olayları tetiklenmeden önce, kategori veya ürüne tıklanınca tıklanan sayfanın bilgileri ```select_item``` event isminde dataLayer’a eklenir.
 - Sepete Ekle: Kullanıcı ürünü sepete eklediğinde ürün bilgileri ```add_to_cart``` event isminde dataLayer’a eklenir.
+- Favorilere Ekleme: Kullanıcı ürünü favorilerine eklediği zaman ```add_to_wishlist``` event isminde dataLayer'a eklenir.
 - Sepetten Çıkar: Kullanıcı sepet sayfasında ürünü sepetten çıkardığında çıkarılan ürün bilgileri ```remove_from_cart``` event isminde dataLayer’a eklenir.
+- Sepeti Görüntüle: Kullanıcı sepetine eklediği ürünleri görüntülediği zaman ```view_card``` event isminde dataLayer’a eklenir.
+- Ödeme Bilgisi Ekleme: Kullanıcı ödeme sırasında, ödeme bilgilerini eklediği zaman ```add_payment_info``` event isminde dataLayer’a eklenir.
 - Ödeme: Kullanıcı ödeme adımlarına geldiğinde ürün biligileri ```begin_checkout``` event isminde dataLayer’a eklenir.
 - Alışveriş: Satın alma işlemi başarılıyla tamamlandığında, ```purchase``` event isminde dataLayer’a eklenir.
 - Promosyonlar: Sayfadaki Slyat veya Banner Performansı ölçmek için içerdiği bilgiler ```view_promotion``` event isminde dataLayer’a eklenir.
