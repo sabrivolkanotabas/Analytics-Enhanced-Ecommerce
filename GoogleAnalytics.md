@@ -48,7 +48,7 @@ window.dataLayer.push({
 	'item_name': "Bayan Kol Saati",
 	'item_id': "12345",
 	'price': 596.70,
-	'item_brand': "Guess",
+	'item_brand': "Brand",
 	'item_category': "Saat",
 	'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
 	'item_category3': "3. Kategori", 
@@ -57,12 +57,12 @@ window.dataLayer.push({
 	'item_list_name': "Bayan Saat Modelleri",
   },
   {
-	'item_name': "WWG203802 Kol Saati",
+	'item_name': "Erkek Kol Saati",
 	'item_id': "67890",
 	'price': 240.00,
-	'item_brand': "Wesse",
+	'item_brand': "Brand",
 	'item_category': "Saat",
-	'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+	'item_category2': "Erkek Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
 	'item_category3': "3. Kategori", 
 	'item_category4': "4. Kategori",
 	'item_variant': "Metalik Gri"
@@ -85,7 +85,7 @@ window.dataLayer.push({
         'item_name': "Bayan Kol Saati",
         'item_id': "12345",
         'price': 596.70,
-        'item_brand': "Guess",
+        'item_brand': "Brand",
         'item_category': "Saat",
         'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
         'item_category3': "3. Kategori",
