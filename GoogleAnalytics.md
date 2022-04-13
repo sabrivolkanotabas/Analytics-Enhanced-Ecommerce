@@ -2,12 +2,12 @@
 
 #
 
-# Google Analytics (UA/GA4) Gelişmiş E-Ticaret Geliştirici Kılavuzu.
+# Google Analytics (UA/GA4) Gelişmiş E-Ticaret Geliştirici Kılavuzu
  
 Bu belgenin amacı, e-ticaret siteniz için kullanıcı davranışını, ürün/hizmet satışlarının ve kullanıcı eylemlerinin Universal Analaytics ve Google Analytics GA4’e gönderilmesini sağlamak için gerekli dataLayer kodlarını entegre etmeye yardımcı olmaktır.
  
  
-## 1. Gelişmiş E-ticaret Etkinlikleri.
+## 1. Gelişmiş E-ticaret Etkinlikleri
  
 Gelişmiş E-Ticaret raporlaması, kullanıcılarınızın alışveriş davranışlarına ilişkin öngörüler sağlar ve en popüler ürünlerinizi ölçmenize, promosyonların ve ürün yerleştirmenin gelirleri nasıl etkilediğini görmenize olanak tanır.
 
@@ -24,7 +24,7 @@ Gelişmiş E-Ticaret raporlaması, kullanıcılarınızın alışveriş davranı
 - Alışveriş: Satın alma işlemi başarılıyla tamamlandığında, ```purchase``` event isminde dataLayer’a eklenir.
 - Promosyonlar: Sayfadaki Slyat veya Banner Performansı ölçmek için içerdiği bilgiler ```view_promotion``` event isminde dataLayer’a eklenir.
  
-## 1.3 Kurulum Dokümantasyonu.
+## 1.3 Kurulum Dokümantasyonu
 
 NOT: Kurulum aşamasında kodlar içerisinde dikkatinizi çekebilir; ürünle ilgili bilgileri items dizisine ekliyorsak neden tekrardan products dizisine ekliyoruz? Ya da items dizi içinde ürün id değeri item_id anahtarına ekliyorsak neden tekrar id anahtarına ekliyoruz? Bu Google Analytics UA ve GA4 arasındaki farklardır, GA4 items dizisi içerisinden alırken, UA products dizisi içine alıyor. Aynı şekilde GA4 ürün id değerini item_id'den elırken, Google Ads Remarkeiting id parametsi üzerinden almaktadır. 
 
@@ -32,7 +32,7 @@ NOT: Kurulum aşamasında kodlar içerisinde dikkatinizi çekebilir; ürünle il
 
 Google Tag Manager ile yapılandırılan GA4 etiketinde etkileşim olayı otomatik gönderir. Bunun için herhangi bir kurulum yapmanıza gerek yoktur.
  
-### 1.3.2 Ürün Listesi Görünümleri.
+### 1.3.2 Ürün Listesi Görünümleri
 
 Kategori sayfalarında listelenen ürünlerin performansını ölçmek için, dataLayer’a bir ürün listesi gönderin ve bu verileri ```view_item_list``` event altında toplayın. ‘items’ içindeki objeler, sayfadaki ürünlerden eklenecektir ve en fazla 7 adet ürün eklensin.
 
@@ -77,7 +77,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.3 Ürün Görüntülüme.
+### 1.3.3 Ürün Görüntülüme
  
 ```view_item``` ürün görünümlerini ölçer. Bu olay, ürün sayfası yüklendiğinde gerçekleşir.
  
@@ -121,7 +121,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.4 Ürün Tıklama.
+### 1.3.4 Ürün Tıklama
  
 Bu event, ürüne tıklamaları ölçmek için kullanılır.
 Yukarıda bahsedilen ```view_item``` olayları tetiklenmeden önce, ürüne tıklanınca tetiklenir. Tıklanan ürünün bilgileri ```select_item``` event isminde dataLayer’a eklenir.
@@ -161,7 +161,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.5 Sepete Ekle.
+### 1.3.5 Sepete Ekle
  
 ```add_to_cart``` sepete eklenen ürünlerin ölçümünü yapar.
  
@@ -202,7 +202,7 @@ window.dataLayer.push({
 });
 ```
 
-### 1.3.6 Favorilere Ekle.
+### 1.3.6 Favorilere Ekle
  
 ```add_to_wishlist``` favorilere eklenen ürünlerin ölçümünü yapar.
  
@@ -227,7 +227,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.7 Sepetten Çıkar.
+### 1.3.7 Sepetten Çıkar
  
 ```remove_from_cart``` kullanıcı sepet sayfasından bir ürünü çıkardığında gönderilir.
  
@@ -263,7 +263,7 @@ window.dataLayer.push({
 });
 ```
 
-### 1.3.8 Sepet.
+### 1.3.8 Sepet
  
 ```view_cart``` Kullanıcının sepet sayfasına geldiğinde tetiklenir.. Toplanan veri ```begin_checkout``` event isminde dataLayer’a ilave edilir.
  
@@ -300,7 +300,7 @@ window.dataLayer.push({
 });
 ```
 
-### 1.3.9 Ödeme Bilgisi.
+### 1.3.9 Ödeme Bilgisi
  
 ```add_payment_info``` kullanıcı ödeme sırasında ödeme bilgilerini eklediğinde tetiklenir.
  
@@ -337,7 +337,7 @@ window.dataLayer.push({
 });
 ```
 
-### 1.3.10 Ödeme Başlatma.
+### 1.3.10 Ödeme Başlatma
  
 Bir kullanıcı ödeme işlemini başlattığında gönderilir ve ödeme başlatma işlemlerini ölçmek için kullanılır. Toplanan veri ```begin_checkout``` event isminde dataLayer’a ilave edilir.
  
@@ -400,7 +400,7 @@ window.dataLayer.push({
 });
 ```
  
-### 1.3.11 Alışveriş.
+### 1.3.11 Alışveriş
 
 ```purchase``` satın alma işlemini tamamladığında gönderilir. Ödeme işlemi başarılı olduğu taktirde aşağıdaki kod bloğu çalışır ve satın alınan ürünlerin listesi obje halinde dataLayer’a eklenilir.
  
@@ -469,13 +469,13 @@ dataLayer.push({
 });
 ``` 
 
-## 1.4 Promosyon Görünümleri ve Etkileşimler.
+## 1.4 Promosyon Görünümleri ve Etkileşimler
  
 Slider/Promosyon görünümlerini ve etkileşimlerini ölçmek, kullanıcılar tarafından ne sıklıkta görüntülendiği ve seçildiği hakkında bilgi verir. Ürün verileriyle birlikte aşağıdaki olaylar da kampanyaların etkileşimini ölçmenize yardımcı olabilir.
 
 Eğer sitenizde slider veya promosyon olarak kullandığınız görsel yoksa bu etkinlikleri yoksayabilirsiniz.
  
-### 1.4.1 Slider Etkileşimi.
+### 1.4.1 Slider Etkileşimi
  
 ```view_promotion``` bir kullanıcıya belirli bir slider/promosyon gösterildiğinde gönderilir.
 
