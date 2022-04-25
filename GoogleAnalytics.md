@@ -1,4 +1,4 @@
-![Anatomi](./anatomi-png1.png) 
+![Anatomi](./anatomi-png.png) 
 
 #
 
