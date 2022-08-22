@@ -96,7 +96,7 @@ window.dataLayer.push({
                 'price': 7.70,
                 'brand': 'Google',
                 'category': 'Saat',
-                'variant': 'Metalik Gri'
+                'variant': 'Metalik Gri',
                 'quantity': 1
             }]
         }
