@@ -437,6 +437,27 @@ dataLayer.push({
             'item_variant': "Metalik Gri",
         }
     ],
+
+
+    // Google Ads Enhanced Ecommerce Parametreleri
+    // ❗❗❗ 
+    'enhanced_conversion_data': {
+        "email": 'E-mail adresi',
+        "phone_number": '+90 555 111 22 33',
+
+        // ❗❗❗ Aşağıdaki veriler zorunlu alınıyorsa kullanıcılardan gönderilsin.
+        // Eğer bir tanesi bile zorunlu değilse o zaman "address" objesi gönderilmesin, sadece email ve phone_number gönderilsin yeterlidir. 
+        "address": {
+            "first_name": 'İsim',
+            "last_name": 'Soyisim',
+            "street": 'Sokak',
+            "city": 'İl',
+            "region": 'İlçe',
+            "postal_code": 'Posta Kodu',
+            "country": 'Ülke'
+        }
+    },
+    
     'ecommerce': {
         'purchase': {
             'actionField': {
