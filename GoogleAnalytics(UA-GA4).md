@@ -1,4 +1,4 @@
-![Anatomi](./anatomi-png.png)  
+![Anatomi](./anatomi-png.png) 
 
 #
 
@@ -44,36 +44,38 @@ NOT: Eğer arama sonucu ürün bulunamazsa o zaman view_item_list olayı tetikle
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "view_item_list",
-    "item_list_name": "Search Results",
-    'items': [{
-            'item_name': "Bayan Kol Saati",
-            'item_id': "12345",
-            'price': 50.70,
-            'item_brand': "Google", // Ürün markası
-            'item_category': "Saat", // Ürün kategorisi
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-            'item_list_name': "Search Results",
-            'id': "12345", // item_id değeri eklenecek.
-            'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
-        },
-        {
-            'item_name': "Erkek Kol Saati",
-            'item_id': "67890",
-            'price': 23.00,
-            'item_brand': "Google", // Ürün markası
-            'item_category': "Saat", // Ürün kategorisi
-            'item_category2': "Erkek Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-            'item_list_name': "Search Results",
-            'id': "12345", // item_id değeri eklenecek.
-            'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
-        }
-    ]
+    'ecommerce': {
+        "item_list_name": "Search Results",
+        'items': [{
+                'item_name': "Bayan Kol Saati",
+                'item_id': "12345",
+                'price': 50.70,
+                'item_brand': "Google", // Ürün markası
+                'item_category': "Saat", // Ürün kategorisi
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+                'item_list_name': "Search Results",
+                'id': "12345", // item_id değeri eklenecek.
+                'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
+            },
+            {
+                'item_name': "Erkek Kol Saati",
+                'item_id': "67890",
+                'price': 23.00,
+                'item_brand': "Google", // Ürün markası
+                'item_category': "Saat", // Ürün kategorisi
+                'item_category2': "Erkek Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+                'item_list_name': "Search Results",
+                'id': "12345", // item_id değeri eklenecek.
+                'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
+            }
+        ]
+    }
 });
 ```
  
@@ -85,38 +87,24 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "view_item",
-    'currency': "TRY",
-    'value': 7.77, // Ürün fiyatı
-    'items': [{
-        'item_name': "Bayan Kol Saati",
-        'item_id': "12345",
-        'price': 7.70,  // Ürün fiyatı
-        'item_brand': "Google", // Ürün markası
-        'item_category': "Saat", // Ürün kategorisi
-        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-        'item_category3': "3. Kategori",
-        'item_category4': "4. Kategori",
-        'item_variant': "Metalik Gri",
-        'quantity': 1,
-        'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
-        'id': "12345", // item_id değeri eklenecek.
-        'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
-    }],
     'ecommerce': {
-        'detail': {
-            'actionField': {
-                'list': 'Search Results'  // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
-            },
-            'products': [{
-                'name': 'Bayan Kol Saati',
-                'id': '12345',
-                'price': 7.70,
-                'brand': 'Google',
-                'category': 'Saat',
-                'variant': 'Metalik Gri',
-                'quantity': 1
-            }]
-        }
+        'currency': "TRY",
+        'value': 7.77, // Ürün fiyatı
+        'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 7.70, // Ürün fiyatı
+            'item_brand': "Google", // Ürün markası
+            'item_category': "Saat", // Ürün kategorisi
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+            'quantity': 1,
+            'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
+            'id': "12345", // item_id değeri eklenecek.
+            'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
+        }]
     }
 });
 ```
@@ -130,33 +118,20 @@ Yukarıda bahsedilen ```view_item``` olayları tetiklenmeden önce, ürüne tık
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "select_item",
-    'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
-    'items': [{
-        'item_name': "Bayan Kol Saati",
-        'item_id': "12345",
-        'price': 7.70, // Ürün fiyatı
-        'item_brand': "Google", // Ürün markası
-        'item_category': "Saat", // Ürün kategorisi
-        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-        'item_category3': "3. Kategori",
-        'item_category4': "4. Kategori",
-        'item_variant': "Metalik Gri",
-        'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
-    }],
     'ecommerce': {
-        'click': {
-            'actionField': {
-                'list': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
-            },
-            'products': [{
-                'name': 'Bayan Kol Saati',
-                'id': '12345',
-                'price': 7.70,
-                'brand': 'Google',
-                'category': 'Saat',
-                'variant': 'Metalik Gri'
-            }]
-        }
+        'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
+        'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 7.70, // Ürün fiyatı
+            'item_brand': "Google", // Ürün markası
+            'item_category': "Saat", // Ürün kategorisi
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+            'item_list_name': "Search Results", // Kullanıcı hangi listeden gelmiş: Arama sonuçlarından, Saat kategorisinden ya da ana sayfada Çok Satılanlar listesinden.
+        }]
     }
 });
 ```
@@ -169,35 +144,23 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "add_to_cart",
-    'currency': "TRY",
-    'value': 7.77,
-    'items': [{
-        'item_name': "Bayan Kol Saati",
-        'item_id': "12345",
-        'price': 7.70, // Ürün fiyatı
-        'item_brand': "Google", // Ürün markası
-        'item_category': "Saat", // Ürün kategorisi
-        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-        'item_category3': "3. Kategori",
-        'item_category4': "4. Kategori",
-        'item_variant': "Metalik Gri", 
-        'quantity': 1,
-        'id': "12345", // item_id değeri eklenecek.
-        'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
-    }],
     'ecommerce': {
-        'currencyCode': 'TRY',
-        'add': {
-            'products': [{
-                'name': 'Bayan Kol Saati',
-                'id': '12345',
-                'price': 7.70,
-                'brand': 'Google',
-                'category': 'Saat',
-                'variant': 'Metalik Gri',
-                'quantity': 1
-            }]
-        }
+        'currency': "TRY",
+        'value': 7.77,
+        'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 7.70, // Ürün fiyatı
+            'item_brand': "Google", // Ürün markası
+            'item_category': "Saat", // Ürün kategorisi
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+            'quantity': 1,
+            'id': "12345", // item_id değeri eklenecek.
+            'google_business_vertical': 'retail' // Google Ads parametresi, değişmez.
+        }]
     }
 });
 ```
@@ -210,20 +173,22 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "add_to_wishlist",
-    'currency': "TRY",
-    'value': 7.77,
-    'items': [{
-        'item_name': "Bayan Kol Saati",
-        'item_id': "12345",
-        'price': 7.70, // Ürün fiyatı
-        'item_brand': "Google", // Ürün markası
-        'item_category': "Saat", // Ürün kategorisi
-        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-        'item_category3': "3. Kategori",
-        'item_category4': "4. Kategori",
-        'item_variant': "Metalik Gri", 
-        'quantity': 1,
-    }]
+    'ecommerce': {
+        'currency': "TRY",
+        'value': 7.77,
+        'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 7.70, // Ürün fiyatı
+            'item_brand': "Google", // Ürün markası
+            'item_category': "Saat", // Ürün kategorisi
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+            'quantity': 1,
+        }]
+    }
 });
 ```
  
@@ -235,30 +200,20 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "remove_from_cart",
-    'currency': "TRY",
-    'value': 7.77,
-    'items': [{
-        'item_name': "Bayan Kol Saati",
-        'item_id': "12345",
-        'price': 7.70, // Ürün fiyatı
-        'item_brand': "Google", // Ürün markası
-        'item_category': "Saat", // Ürün kategorisi
-        'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-        'item_category3': "3. Kategori",
-        'item_category4': "4. Kategori",
-        'item_variant': "Metalik Gri",
-    }],
     'ecommerce': {
-        'remove': {
-            'products': [{
-                'name': 'Bayan Kol Saati',
-                'id': '12345',
-                'price': 7.70,
-                'brand': 'Google',
-                'category': 'Saat',
-                'variant': 'Metalik Gri'
-            }]
-        }
+        'currency': "TRY",
+        'value': 7.77,
+        'items': [{
+            'item_name': "Bayan Kol Saati",
+            'item_id': "12345",
+            'price': 7.70, // Ürün fiyatı
+            'item_brand': "Google", // Ürün markası
+            'item_category': "Saat", // Ürün kategorisi
+            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+            'item_category3': "3. Kategori",
+            'item_category4': "4. Kategori",
+            'item_variant': "Metalik Gri",
+        }]
     }
 });
 ```
@@ -272,31 +227,33 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "view_cart",
-    'currency': "TRY",
-    'value': 156, // Toplam tutar.
-    'items': [{
-            'item_name': "Bayan Kol Saati",
-            'item_id': "12345",
-            'price': 96.70,
-            'item_brand': "Google",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        },
-        {
-            'item_name': "Erkek Kol Saati",
-            'item_id': "12345",
-            'price': 59.30,
-            'item_brand': "Apple",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        }
-    ]
+    'ecommerce': {
+        'currency': "TRY",
+        'value': 156, // Sepet toplam tutar.
+        'items': [{
+                'item_name': "Bayan Kol Saati",
+                'item_id': "12345",
+                'price': 96.70,
+                'item_brand': "Google",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            },
+            {
+                'item_name': "Erkek Kol Saati",
+                'item_id': "12345",
+                'price': 59.30,
+                'item_brand': "Apple",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            }
+        ]
+    }
 });
 ```
 
@@ -304,36 +261,37 @@ window.dataLayer.push({
  
 ```add_payment_info``` kullanıcı ödeme sırasında ödeme bilgilerini eklediğinde tetiklenir.
  
- 
 ```javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "add_payment_info",
-    'currency': "TRY",
-    'value': 156, // Toplam tutar.
-    'items': [{
-            'item_name': "Bayan Kol Saati",
-            'item_id': "12345",
-            'price': 96.70,
-            'item_brand': "Google",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        },
-        {
-            'item_name': "Erkek Kol Saati",
-            'item_id': "12345",
-            'price': 59.30,
-            'item_brand': "Apple",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        }
-    ]
+    'ecommerce': {
+        'currency': "TRY",
+        'value': 156, // Toplam tutar.
+        'items': [{
+                'item_name': "Bayan Kol Saati",
+                'item_id': "12345",
+                'price': 96.70,
+                'item_brand': "Google",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            },
+            {
+                'item_name': "Erkek Kol Saati",
+                'item_id': "12345",
+                'price': 59.30,
+                'item_brand': "Apple",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            }
+        ]
+    }
 });
 ```
 
@@ -346,56 +304,32 @@ Bir kullanıcı ödeme işlemini başlattığında gönderilir ve ödeme başlat
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': "begin_checkout",
-    'currency': "TRY",
-    'value': 156, // Toplam tutar.
-    'items': [{
-            'item_name': "Bayan Kol Saati",
-            'item_id': "12345",
-            'price': 96.70,
-            'item_brand': "Google",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        },
-        {
-            'item_name': "Erkek Kol Saati",
-            'item_id': "12345",
-            'price': 59.30,
-            'item_brand': "Apple",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        }
-    ],
     'ecommerce': {
-        'checkout': {
-            'actionField': {
-                'step': 1,
+        'currency': "TRY",
+        'value': 156, // Toplam tutar.
+        'items': [{
+                'item_name': "Bayan Kol Saati",
+                'item_id': "12345",
+                'price': 96.70,
+                'item_brand': "Google",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
             },
-            'products': [{
-                    'name': 'Bayan Kol Saati',
-                    'id': '12345',
-                    'price': 96.70,
-                    'brand': 'Google',
-                    'category': 'Saat',
-                    'variant': 'Metalik Gri',
-                    'quantity': 1
-                },
-                {
-                    'name': 'Erkek Kol Saati',
-                    'id': '12345',
-                    'price': 59.30,
-                    'brand': 'Apple',
-                    'category': 'Saat',
-                    'variant': 'Metalik Gri',
-                    'quantity': 1
-                }
-            ]
-        }
+            {
+                'item_name': "Erkek Kol Saati",
+                'item_id': "12345",
+                'price': 59.30,
+                'item_brand': "Apple",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            }
+        ]
     }
 });
 ```
@@ -409,83 +343,35 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
     'event': "purchase",
-    'transaction_id': "T12345", // Sipariş numarası.
-    'value': "809.70", // Sipariş toplam tutarı.
-    'tax': "0.00", // Vergi.
-    'shipping': "0.00", // Kargo tutarı.
-    'currency': "TRY", // Para birimi.
-    'items': [{
-            'item_name': "Bayan Kol Saati",
-            'item_id': "12345",
-            'price': 96.70,
-            'item_brand': "Google",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        },
-        {
-            'item_name': "Erkek Kol Saati",
-            'item_id': "12345",
-            'price': 59.30,
-            'item_brand': "Apple",
-            'item_category': "Saat",
-            'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
-            'item_category3': "3. Kategori",
-            'item_category4': "4. Kategori",
-            'item_variant': "Metalik Gri",
-        }
-    ],
-
-
-    // Google Ads Enhanced Ecommerce Parametreleri
-    // ❗❗❗ 
-    'enhanced_conversion_data': {
-        "email": 'E-mail adresi',
-        "phone_number": '+90 555 111 22 33',
-
-        // ❗❗❗ Aşağıdaki veriler zorunlu alınıyorsa kullanıcılardan gönderilsin.
-        // Eğer bir tanesi bile zorunlu değilse o zaman "address" objesi gönderilmesin, sadece email ve phone_number gönderilsin yeterlidir. 
-        "address": {
-            "first_name": 'İsim',
-            "last_name": 'Soyisim',
-            "street": 'Sokak',
-            "city": 'İl',
-            "region": 'İlçe',
-            "postal_code": 'Posta Kodu',
-            "country": 'Ülke'
-        }
-    },
-    
     'ecommerce': {
-        'purchase': {
-            'actionField': {
-                'id': 'T12345',
-                'revenue': '35.43',
-                'tax': '4.90',
-                'shipping': '5.99',
+        'transaction_id': "T12345", // Sipariş numarası.
+        'value': "809.70", // Sipariş toplam tutarı.
+        'tax': "0.00", // Vergi.
+        'shipping': "0.00", // Kargo tutarı.
+        'currency': "TRY", // Para birimi.
+        'items': [{
+                'item_name': "Bayan Kol Saati",
+                'item_id': "12345",
+                'price': 96.70,
+                'item_brand': "Google",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
             },
-            'products': [{
-                    'name': 'Bayan Kol Saati',
-                    'id': '12345',
-                    'price': 96.70,
-                    'brand': 'Google',
-                    'category': 'Saat',
-                    'variant': 'Metalik Gri',
-                    'quantity': 1
-                },
-                {
-                    'name': 'Erkek Kol Saati',
-                    'id': '12345',
-                    'price': 59.30,
-                    'brand': 'Apple',
-                    'category': 'Saat',
-                    'variant': 'Metalik Gri',
-                    'quantity': 1
-                }
-            ]
-        }
+            {
+                'item_name': "Erkek Kol Saati",
+                'item_id': "12345",
+                'price': 59.30,
+                'item_brand': "Apple",
+                'item_category': "Saat",
+                'item_category2': "Bayan Saat Modelleri", // Varsa diğer alt kategoriler de eklesin
+                'item_category3': "3. Kategori",
+                'item_category4': "4. Kategori",
+                'item_variant': "Metalik Gri",
+            }
+        ]
     }
 });
 ``` 
@@ -506,25 +392,27 @@ Not: Bu event her slider kaydırıldığı zaman tetiklenir.
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
     'event': 'view_promotion',
-    'creative_name': "Bayan Saati", 
-    'creative_slot': "Doğum Günü Hediyesi",
-    'location_id': "3", // Slider içinde 3. slide
-    'promotion_id': "P_12345", // Silder id numarası
-    'promotion_name': "Summer Sale", // Eğer bu ürün bir kampanya ise kampanya ismi.
-    'items': [{
-        'item_id': "SKU_12345",
-        'item_name': "Stan and Friends Tee",
-        'currency': "TRY",
-        'item_brand': "Google",
-        'item_category': "Apparel", // Varsa alt kırılımlar.
-        'item_category2': "Adult",
-        'item_category3': "Shirts",
-        'item_category4': "Crew",
-        'item_category5': "Short sleeve",
-        'item_variant': "green",
-        'location_id': "3",
-        'price': 9.99,
-    }]
+    'ecommerce': {
+        'creative_name': "Bayan Saati",
+        'creative_slot': "Doğum Günü Hediyesi",
+        'location_id': "3", // Slider içinde 3. slide
+        'promotion_id': "P_12345", // Silder id numarası
+        'promotion_name': "Summer Sale", // Eğer bu ürün bir kampanya ise kampanya ismi.
+        'items': [{
+            'item_id': "SKU_12345",
+            'item_name': "Stan and Friends Tee",
+            'currency': "TRY",
+            'item_brand': "Google",
+            'item_category': "Apparel", // Varsa alt kırılımlar.
+            'item_category2': "Adult",
+            'item_category3': "Shirts",
+            'item_category4': "Crew",
+            'item_category5': "Short sleeve",
+            'item_variant': "green",
+            'location_id': "3",
+            'price': 9.99,
+        }]
+    }
 });
 ```
  
@@ -536,24 +424,26 @@ dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({
     'event': 'select_promotion',
-    'creative_name': "Bayan Saati", 
-    'creative_slot': "Doğum Günü Hediyesi",
-    'location_id': "3", // Slider içinde 3. slide
-    'promotion_id': "P_12345", // Silder id numarası
-    'promotion_name': "Summer Sale", // Eğer bu ürün bir kampanya ise kampanya ismi.
-    'items': [{
-        'item_id': "SKU_12345",
-        'item_name': "Stan and Friends Tee",
-        'currency': "TRY",
-        'item_brand': "Google",
-        'item_category': "Apparel", // Varsa alt kırılımlar.
-        'item_category2': "Adult",
-        'item_category3': "Shirts",
-        'item_category4': "Crew",
-        'item_category5': "Short sleeve",
-        'item_variant': "green",
-        'location_id': "3",
-        'price': 9.99,
-    }]
+    'ecommerce': {
+        'creative_name': "Bayan Saati",
+        'creative_slot': "Doğum Günü Hediyesi",
+        'location_id': "3", // Slider içinde 3. slide
+        'promotion_id': "P_12345", // Silder id numarası
+        'promotion_name': "Summer Sale", // Eğer bu ürün bir kampanya ise kampanya ismi.
+        'items': [{
+            'item_id': "SKU_12345",
+            'item_name': "Stan and Friends Tee",
+            'currency': "TRY",
+            'item_brand': "Google",
+            'item_category': "Apparel", // Varsa alt kırılımlar.
+            'item_category2': "Adult",
+            'item_category3': "Shirts",
+            'item_category4': "Crew",
+            'item_category5': "Short sleeve",
+            'item_variant': "green",
+            'location_id': "3",
+            'price': 9.99,
+        }]
+    }
 });
 ```
